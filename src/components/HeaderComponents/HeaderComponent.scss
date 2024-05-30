@@ -16,6 +16,7 @@ nav {
   position: fixed;
   width: 100%;
   background-color: white;
+  z-index: 9999;
 
   .header {
     display: flex;
@@ -80,6 +81,13 @@ nav {
           border: 2px solid $secondary;
         }
       }
+    }
+  }
+
+  .line {
+    hr {
+      border: 1px solid #efeef3;
+      margin: 1rem 0;
     }
   }
 }
