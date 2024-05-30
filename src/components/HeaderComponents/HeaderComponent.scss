@@ -1,85 +1,140 @@
 @import "../../index.scss";
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 10%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  z-index: 9999;
-  background: #fff;
-  box-shadow: $box-shadow;
-
-  .logo {
-    max-width: 100%;
+@keyframes growOut {
+  0% {
+    transform: scale(0);
   }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-  nav {
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+
+  .header {
     display: flex;
-    gap: 6rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
 
-    .link {
-      color: black;
-      font-size: 1rem;
-      font-weight: 500;
-      line-height: 1rem;
-      text-transform: capitalize;
-      transition: all 0.3s ease-in-out;
+    .menu-bar {
+      display: none;
+    }
 
-      &:hover {
-        color: $secondary;
+    .nav-link {
+      display: flex;
+      gap: 3rem;
+
+      .link {
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1rem;
+        color: $black;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    .nav-button {
+      display: flex;
+      gap: 1rem;
+
+      .btn-signIn,
+      .btn-logIn {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1rem;
+        padding: 0.8rem 2rem;
+        border-radius: 0.5rem;
+        border: 2px solid $primary;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .btn-signIn {
+        color: $black;
+
+        &:hover {
+          background-color: $secondary;
+          color: white;
+          border: 2px solid $secondary;
+        }
+      }
+
+      .btn-logIn {
+        color: $white;
+        background-color: $primary;
+
+        &:hover {
+          background-color: $secondary;
+          border: 2px solid $secondary;
+        }
       }
     }
   }
 }
 
-// @media (max-width: 768px) {
-//   .header {
-//     padding: 2rem 5%;
+@media (max-width: 768px) {
+  nav {
+    .header {
+      flex-direction: column;
 
-//   .nav-button {
-//     padding: 0.5em 1em;
-//     border: none;
-//     background-color: #007bff;
-//     color: #fff;
-//     cursor: pointer;
-//   }
+      .nav-responsive {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
 
-//   .nav-links,
-//   .nav-button {
-//     @media (max-width: 768px) {
-//       display: none;
-//     }
-//   }
+      .menu-bar {
+        display: block;
+        cursor: pointer;
+        font-size: 3rem;
+      }
 
-//   .menu-bar {
-//     display: none;
+      .nav-link {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 0;
+        animation: growOut 300ms ease-in-out forwards;
+        transform-origin: top center;
 
-//     @media (max-width: 768px) {
-//       display: block;
-//     }
-//   }
+        .link {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+      }
 
-//   .nav-links.open,
-//   .nav-button.open {
-//     display: block !important;
-//   }
+      .nav-link.show {
+        display: flex;
+      }
 
-//   @media (max-width: 768px) {
-//     flex-direction: column;
-//     align-items: center;
+      .nav-button {
+        display: none;
+        animation: growOut 300ms ease-in-out forwards;
+        transform-origin: top center;
 
-//     .nav-links {
-//       flex-direction: column;
-//       gap: 0.5em;
-//     }
+        .btn-logIn,
+        .btn-signIn {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+      }
 
-//     .nav-button {
-//       width: 100%;
-//       text-align: center;
-//     }
-//   }
-// }
+      .nav-button.show {
+        display: flex;
+      }
+    }
+  }
+}

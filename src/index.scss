@@ -9,17 +9,12 @@
   text-decoration: none;
 }
 
+$black: #000;
 $primary: #16133e;
 $secondary: #007ffc;
 $green: #56cbae;
 $red: #fa6770;
 $white: #fff;
-$light-color: #666;
-$light-bg: #f3f3f3;
-$box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-$border: 0.2rem solid rgba(0, 0, 0, 0.1);
-$outline: 0.1rem solid rgba(0, 0, 0, 0.1);
-$outline-hover: 0.2rem solid $secondary;
 
 html {
   overflow-x: hidden;
@@ -35,10 +30,9 @@ footer {
   padding: 2rem 9%;
 }
 
-.heading {
-  text-align: center;
-  font-size: 3.5rem;
-  padding: 2rem 0 3rem 0;
+nav,
+#HomePage {
+  padding: 1rem 9%;
 }
 
 @media (max-width: 991px) {
@@ -60,10 +54,6 @@ footer {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
-  }
-
-  .heading {
-    font-size: 2.5rem;
   }
 
   .footer {
