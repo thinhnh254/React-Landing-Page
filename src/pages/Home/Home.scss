@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 #banner {
-  padding-top: 10rem;
+  padding: 10rem 9% 0 9%;
   display: flex;
   width: 100%;
 
@@ -33,6 +33,7 @@
         border-radius: 0.5rem;
         border: 2px solid $secondary;
         transition: all 0.3s ease-in-out;
+        cursor: pointer;
 
         &:nth-child(1) {
           background-color: $secondary;
@@ -75,6 +76,7 @@
       border-radius: 0.5rem;
       background-color: $primary;
       transition: all 0.3s ease-in-out;
+      cursor: pointer;
 
       &:hover {
         background-color: $secondary;
@@ -92,6 +94,33 @@
     .bannerImg {
       width: 95%;
     }
+  }
+}
+
+#service {
+  padding: 1rem 9%;
+
+  .service-title {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    color: $gray;
+    padding: 3rem 0;
+  }
+
+  .service-text {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1rem;
+    color: $grayText;
+    padding: 3rem 0;
+  }
+
+  .service-box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
   }
 }
 
@@ -130,6 +159,24 @@
 
     .banner-right {
       width: 100%;
+    }
+  }
+
+  #service {
+    .service-title {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      padding: 3rem 0;
+    }
+
+    .service-text {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      padding: 3rem 0;
+    }
+
+    .service-box {
+      flex-direction: column;
     }
   }
 }

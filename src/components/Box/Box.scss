@@ -1,0 +1,62 @@
+@import "../../index.scss";
+
+.box-components {
+  border: 1px solid #e5eaf4;
+  border-radius: 0.5rem;
+  padding: 2rem;
+
+  .boxImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e8f0fb;
+    width: 3.875rem;
+    height: 3.875rem;
+  }
+
+  .box-title {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 3.25rem;
+    color: $primary;
+    padding: 1rem 0;
+  }
+
+  .box-text {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    padding-bottom: 2rem;
+  }
+
+  .learnMore {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 3.25rem;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 991px) {
+  .box-components {
+    .box-title {
+      font-size: 2rem;
+      line-height: 4rem;
+      padding: 1rem 0;
+    }
+
+    .box-text {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      padding-bottom: 3rem;
+    }
+
+    .learnMore {
+      font-size: 1.5rem;
+      line-height: 3.25rem;
+    }
+  }
+}

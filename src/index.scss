@@ -16,6 +16,8 @@ $text: #183b56;
 $green: #56cbae;
 $red: #fa6770;
 $white: #fff;
+$gray: #87a1b6;
+$grayText: #5a7184;
 
 html {
   overflow-x: hidden;
@@ -24,15 +26,14 @@ html {
 }
 
 section {
-  padding: 2rem 9%;
+  padding: 0 9%;
 }
 
 footer {
   padding: 2rem 9%;
 }
 
-nav,
-#banner {
+nav {
   padding: 1rem 9%;
 }
 
